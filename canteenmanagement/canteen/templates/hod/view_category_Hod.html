@@ -1,0 +1,61 @@
+{% extends 'hod/PageHeader.html' %}
+{% block content %}
+
+<head>
+    <style>
+        #cs {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+            #cs td, #cs th {
+                border: 1px solid #ddd;
+                padding: 8px;
+            }
+
+            #cs tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            #cs tr:hover {
+                background-color: #f2f2f2;
+            }
+
+            #cs th {
+                padding-top: 12px;
+                padding-bottom: 12px;
+                text-align: left;
+            }
+    </style>
+    <body>
+        <table id="cs">
+      
+      <tr>
+          <th>Name</th>
+       
+    
+      </tr>
+      </thead>
+      <tbody>
+  {% for employee in employee %}
+      <tr>
+      
+          <td>{{employee.category_name}}</td>
+          <td> </td>
+          <td> </td>
+          <td>
+              <a href="Ordering_item_hod/{{ employee.id  }}"><span class="glyphicon glyphicon-pencil" >Select</span></a>
+  
+  
+          </td>
+      </tr>
+  {% endfor %}
+      </tbody>
+  </table>
+  <br>
+  <br>
+  
+  </body>
+  </html>
+  {% endblock %}

@@ -1,0 +1,39 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Log in</title>
+<link rel="stylesheet" href="static/radio.css">
+
+<form method="POST" class="post-form">
+    {% csrf_token %}
+
+<div class="container">
+	
+	<h2>Your favorite thing in the world:</h2>
+	
+  <ul>
+  <li>
+    <input type="radio" id="servingtype" name="servingtype" value="DINNING">
+    <label for="DINNING">Dinning</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li>
+    <input type="radio" id="servingtype" name="servingtype" value="PARSEL">
+    <label for="PARSEL">parsel</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+  
+</ul>
+</div>
+<input type="submit" value="Submit">
+</form>
+
+
+
+
+
+</body>
+</html>
